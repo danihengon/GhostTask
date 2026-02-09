@@ -1,0 +1,26 @@
+### Create Reminder
+POST http://localhost:8080/reminders
+Content-Type: application/json
+
+{
+  "title": "Buy Milk",
+  "description": "Don't forget the milk",
+  "latitude": 40.4168,
+  "longitude": -3.7038,
+  "radiusMeters": 100.0,
+  "notifyOnlyOnce": true
+}
+
+### List Reminders
+GET http://localhost:8080/reminders
+Accept: application/json
+
+### Get Single Reminder (Replace UUID)
+GET http://localhost:8080/reminders/{id}
+Accept: application/json
+
+### Complete Reminder (Replace UUID)
+PUT http://localhost:8080/reminders/{id}/complete
+
+### Delete Reminder (Replace UUID)
+DELETE http://localhost:8080/reminders/{id}
